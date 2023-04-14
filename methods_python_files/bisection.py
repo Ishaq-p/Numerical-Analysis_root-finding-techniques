@@ -4,8 +4,8 @@ from rounding import rounding as rnd        # rounding.py is in the same folder,
 
 # defining the function
 def f_(x):
-    return 3.64*x * (1 - x**2 + x)*np.log(x) - x**2 +1
-    # return x**3 + 2*x**2 - (41*x) - 32
+    return 2.47*x * (1 - x**2 + x)*np.log(x) - x**2 +1
+    # return x**3 + 8*x**2 - 13*x - 130
 
 # defining the p_(a,b) , the midpoint of a and b
 def p_(a,b):
@@ -51,10 +51,10 @@ def bisect(f, a, b, p0, tol=1e-3, fpa=7):
             b = p1
         p0 = p1
 
-    p1 = rnd(p_(a,b), fpa)[-1]
-    sign = sign_(a,p1)
-    RE = rnd(RE_(p1,p0), fpa)[-1]
-    printing(a, p1, b, sign[1], RE)
+    # p1 = rnd(p_(a,b), fpa)[-1]
+    # sign = sign_(a,p1)
+    # RE = rnd(RE_(p1,p0), fpa)[-1]
+    # printing(a, p1, b, sign[1], RE)
 
 
 
