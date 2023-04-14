@@ -1,32 +1,38 @@
 import numpy as np
-from rounding import rounding as rnd
+from rounding import rounding as rnd        # rounding.py is in the same folder, its pupose is to round according to FPA
 
 
+# defining the function
 def f_(x):
     return 3.64*x * (1 - x**2 + x)*np.log(x) - x**2 +1
     # return x**3 + 2*x**2 - (41*x) - 32
 
+# defining the p_(a,b) , the midpoint of a and b
 def p_(a,b):
     return (a+b)/2
 
+# defining the sign of f(a)*f(p), in order to specify whihc side to give the p
 def sign_(a,p):
     if f_(a)*f_(p) > 0:
         return True,'+'
     elif f_(a)*f_(p)<0:
         return False, '-'
 
+# defining the RE, Relative Error
 def RE_(p1, p0):
     return abs((p1 - p0)/p1)
 
+# custom printing function
 def printing(a, p, b, sign, RE):
     a = round(a, 10)
     b = round(b, 10)
     p = round(p, 10)
-    # RE = round(RE, 10)        // since the RE gets so small that the round() takes more the starting zeros so we all we left with is some floats
+    # RE = round(RE, 10)        # since the RE gets so small that the round() takes more the starting zeros so we all we left with is some floats
     print(a,"\t||\t", p,"\t||\t", b,"\t||\t",sign,"\t||\t", RE)
 
 
 
+# main function
 def bisect(f, a, b, p0, tol=1e-3, fpa=7):
     """Find root of f(x) = 0 on interval [a,b] to within tolerance tol."""
     if f(a)*f(b) > 0:
