@@ -4,7 +4,7 @@ from rounding import rounding as rnd        # rounding.py is in the same folder,
 
 # defining the function
 def func(x):
-    return (x**3)/12 + (x**2)/10 + 1/7
+    return (x**3)/16 + (x**2)/6 + 1/5
 
 # defining the RE, Relative Error
 def RE_(x1, x0):

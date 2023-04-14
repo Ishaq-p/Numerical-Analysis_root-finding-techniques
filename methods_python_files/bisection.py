@@ -4,8 +4,8 @@ from rounding import rounding as rnd        # rounding.py is in the same folder,
 
 # defining the function
 def f_(x):
-    return 2.47*x * (1 - x**2 + x)*np.log(x) - x**2 +1
-    # return x**3 + 8*x**2 - 13*x - 130
+    return (3.38 * x * (1 - x**2 + x)*np.log(x)) - x**2 +1
+    # return x**3 + 12*x**2 + 41*x + 40
 
 # defining the p_(a,b) , the midpoint of a and b
 def p_(a,b):
